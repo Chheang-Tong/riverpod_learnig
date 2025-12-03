@@ -15,15 +15,20 @@ class StateProviderTutorial extends ConsumerWidget {
       appBar: AppBar(title: const Text('State Provider Tutorial')),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // Increment the counter when the button is pressed
           ref.read(counterProvider.notifier).state++;
         },
         child: const Icon(Icons.add),
       ),
       body: Center(
-        child: Text(
-          'Counter Value: ${ref.watch(counterProvider)}',
-          style: const TextStyle(fontSize: 24),
+        child: Consumer(
+          builder: (BuildContext context, WidgetRef ref, Widget? child) {
+            final counter = ref.watch(counterProvider);
+            print('object');
+            return Text(
+              'Counter value: $counter',
+              style: const TextStyle(fontSize: 24),
+            );
+          },
         ),
       ),
     );
