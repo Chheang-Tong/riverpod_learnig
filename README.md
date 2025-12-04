@@ -12,7 +12,7 @@
 
 ![widget_tree_01.png](assets/images/widget_tree_01.png)
 
-- feature A: Controller is only register and available here...
+- feature A: <mark> Controller is only register and available here... </mark>
 - Feature B: Controller is not registered using Get.put :::: Result: Controller not found
 
 ![widget_tree.png](assets/images/widget_tree.png)
