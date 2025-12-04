@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpro/video/video_7/todo_example/todo_provider_controller.dart';
 
+import '../../video_8/async_notifier_screen.dart';
+
 class TodoScreen extends ConsumerStatefulWidget {
   const TodoScreen({super.key});
 
@@ -76,6 +78,26 @@ class _TodoScreenState extends ConsumerState<TodoScreen> {
             ),
           ],
         ),
+      ),
+      floatingActionButton: Row(
+        // mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const AsyncNotifierScreen()),
+              );
+            },
+            child: Text("Next"),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              ref.invalidate(todoListProvider);
+            },
+            child: Icon(Icons.delete_forever),
+          ),
+        ],
       ),
     );
   }
