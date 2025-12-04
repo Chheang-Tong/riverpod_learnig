@@ -31,3 +31,7 @@
 + Everything will be managed Automatically
 # ========= One-way Stream =========
 ![one_way_stream](assets/images/one_way_stream.png)
+
+- Riverpod handles things efficiently
+- We can also do Testing Easily
+- Riverpod Cache the last emitted value from the stream and display the value in user interface
