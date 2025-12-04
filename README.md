@@ -29,4 +29,5 @@ c. Riverpod Course Playlist
 + Don't have to worry about creation
 + Don't have to worry about disposal
 + Everything will be managed Automatically
-+ 
+# ========= One-way Stream =========
+![one_way_stream](assets/images/one_way_stream.png)
