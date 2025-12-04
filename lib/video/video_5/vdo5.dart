@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../video6/vdo_6.dart';
+import '../video_6/vdo_6.dart';
 import '/video/video_5/fake_api.dart';
 
-final fakeApiProvider =Provider((_)=> FakeApi());
+final fakeApiProvider = Provider((_) => FakeApi());
 
 final greetingFutureProvider = FutureProvider((Ref ref) async {
   final service = ref.read(fakeApiProvider);
@@ -21,9 +21,7 @@ class GreetingScreen extends ConsumerWidget {
           // Navigate only once when success
           Navigator.push(
             context,
-            MaterialPageRoute(
-              builder: (_) =>TimerScreen(),
-            ),
+            MaterialPageRoute(builder: (_) => TimerScreen()),
           );
         },
       );
@@ -35,19 +33,20 @@ class GreetingScreen extends ConsumerWidget {
       body: Center(
         child: greetingAsync.when(
           skipLoadingOnRefresh: false,
-            data: (_)=> const Text("Success! Navigating..."),
-            error: (err,stack)=>Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Text("Error: $err"),
-                SizedBox(height: 12),
-                ElevatedButton(
-                    onPressed: ()=> ref.refresh(greetingFutureProvider),
-                    child: Text('RETRY')
-                )
-              ],
-            ),
-            loading: ()=> CircularProgressIndicator()),
+          data: (_) => const Text("Success! Navigating..."),
+          error: (err, stack) => Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              Text("Error: $err"),
+              SizedBox(height: 12),
+              ElevatedButton(
+                onPressed: () => ref.refresh(greetingFutureProvider),
+                child: Text('RETRY'),
+              ),
+            ],
+          ),
+          loading: () => CircularProgressIndicator(),
+        ),
       ),
     );
   }
