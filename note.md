@@ -36,3 +36,8 @@ to manage providers automatically.
 - <mark>No memory leaks from Streams</mark>
 - Cached values for performance
 - Easy unit testing
+- 
+  <span style="color:red">This text is red</span>
+  <span style="color:blue">This text is blue</span>
+  <span style="color:green">This text is green</span>
+  <span style="color:orange; font-weight:bold">Important text</span>
