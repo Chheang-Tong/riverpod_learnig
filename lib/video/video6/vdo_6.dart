@@ -1,5 +1,6 @@
  import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import '../video_7/counter_example/counter_screen.dart';
 import '/video/video6/fake_streamer_service.dart';
 
 final tickerProvider = StreamProvider((Ref ref){
@@ -24,7 +25,18 @@ class TimerScreen extends ConsumerWidget {
                 Text("$error",style: TextStyle(fontSize: 18 ),),
                 // Text("$stackTree"),
                 SizedBox(height: 15,),
-                ElevatedButton(onPressed: ()=>ref.refresh(tickerProvider), child: Text('RETRY'))
+                ElevatedButton(onPressed: ()=>ref.refresh(tickerProvider), child: Text('RETRY')),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const CounterScreen(),
+                      ),
+                    );
+                  },
+                  child: const Text('Next Screen'),
+                )
+
               ],
             ),
             loading: ()=>Center(child: CircularProgressIndicator())),
