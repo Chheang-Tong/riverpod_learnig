@@ -21,11 +21,11 @@ c. Riverpod Course Playlist
 
 ![playlist.png](assets/images/playlist.png)
 
-# ===================== Riverpod =========================
+# ========= Riverpod =========
 - Don't have to worry about, if stream is create or not
 - Most of the time streams are causing leagues
 - If Streams not handled perfectly, it causes Data leaks
-# ========================================================
+# ============================
 + Don't have to worry about creation
 + Don't have to worry about disposal
 + Everything will be managed Automatically
