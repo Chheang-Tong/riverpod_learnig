@@ -15,8 +15,18 @@ b. Widget_tree
 - feature A: Controller is only register and available here...
 - Feature B: Controller is not registered using Get.put :::: Result: Controller not found
 
-
-
-
-
 ![widget_tree.png](assets/images/widget_tree.png)
+
+c. Riverpod Course Playlist
+
+![playlist.png](assets/images/playlist.png)
+
+# ===================== Riverpod =========================
+- Don't have to worry about, if stream is create or not
+- Most of the time streams are causing leagues
+- If Streams not handled perfectly, it causes Data leaks
+# ========================================================
++ Don't have to worry about creation
++ Don't have to worry about disposal
++ Everything will be managed Automatically
++ 
