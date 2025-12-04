@@ -62,3 +62,7 @@ Riverpod automatically manages creation & disposal of providers.
 - <span style="color:green">Feature A: Controller is registered → OK</span>
 - <span style="color:red">Feature B: Controller NOT registered → Error</span>
 
+<audio controls>
+  <source src="https://raw.githubusercontent.com/username/repo/main/audio/example.mp3" type="audio/mpeg">
+</audio>
+
