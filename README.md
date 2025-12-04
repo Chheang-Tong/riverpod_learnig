@@ -1,4 +1,6 @@
-1. Video 01
+## ====== River Pod Project ======
+
+# 1. Video 01
     > Tired of chasing bugs when state changes?
 <pre>
 - why does this widget rebuild when i don't want it?
@@ -42,3 +44,11 @@
 - We can also do <mark>Testing</mark> Easily
 - Riverpod Cache the last emitted value from the stream and display the value in user <mark>interface</mark>
 </pre>
+
+# ====== Counter Notifier ======
+<pre>
+ - Increment Function
+ - Decrement Function
+ - Reset Function
+</pre>
+![playlist.png](assets/images/playlist.png)
