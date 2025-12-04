@@ -36,8 +36,29 @@ to manage providers automatically.
 - <mark>No memory leaks from Streams</mark>
 - Cached values for performance
 - Easy unit testing
-- 
+
   <span style="color:red">This text is red</span>
   <span style="color:blue">This text is blue</span>
   <span style="color:green">This text is green</span>
   <span style="color:orange; font-weight:bold">Important text</span>
+
+  <mark>Highlighted text</mark>
+  <span style="color:#e91e63; font-weight:bold">Riverpod AutoDispose is AMAZING</span>
+  ## <span style="color:#4CAF50">✔ Why Riverpod?</span>
+
+### 🔥 Performance Boost
+### ⚡ Fast Rebuilds
+### 🟢 Auto Disposal  
+# <span style="color:#4CAF50">Why use ProviderScope?</span>
+
+When you wrap your app with  
+<span style="color:#2196F3; font-weight:bold">ProviderScope</span>,  
+Riverpod automatically manages creation & disposal of providers.
+
+---
+
+## <span style="color:#FF5722">Widget Tree Problem</span>
+
+- <span style="color:green">Feature A: Controller is registered → OK</span>
+- <span style="color:red">Feature B: Controller NOT registered → Error</span>
+
