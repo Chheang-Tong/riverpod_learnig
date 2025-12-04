@@ -5,9 +5,13 @@
 - How do I clean up resource when widgets unmount?
 
 a. Why to use ProviderScope in runApp();
+
 ![main.png](assets/images/main.png)
+
 b. Widget_tree
+
 ![widget_tree_01.png](assets/images/widget_tree_01.png)
+
 - feature A: Controller is only register and available here...
 - Feature B: Controller is not registered using Get.put :::: Result: Controller not found
 
