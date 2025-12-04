@@ -1,1 +1,0 @@
-![Screenshot 2025-12-04 at 9.17.57 in the morning.png](../../../../../var/folders/ql/mktpvbkd3dj5m70hqlk9_src0000gn/T/TemporaryItems/NSIRD_screencaptureui_VUQw0J/Screenshot%202025-12-04%20at%209.17.57%20in%20the%20morning.png)
