@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:riverpro/video/video3.dart';
+import 'package:riverpro/video/video_5/vdo4.dart';
 
 void main() {
-  runApp(ProviderScope(child: MaterialApp(home: Video3())));
+  runApp(ProviderScope(child: MaterialApp(home: GreetingScreen())));
 }
