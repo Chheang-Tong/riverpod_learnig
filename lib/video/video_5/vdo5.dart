@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpro/video/video_6/vdo_6.dart';
 import '/video/video_5/fake_api.dart';
 
 final fakeApiProvider = Provider((_) => FakeApi());
@@ -32,6 +33,17 @@ class GreetingScreen extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final greetingAsync = ref.watch(greetingFutureProvider(34));
+    ref.listen(greetingFutureProvider(34), (previous, next) {
+      next.whenOrNull(
+        data: (value) {
+          // Navigate only once when success
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (_) => TimerScreen()),
+          );
+        },
+      );
+    });
 
     return Scaffold(
       appBar: AppBar(title: Text('Async Greeting')),

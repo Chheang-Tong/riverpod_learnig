@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpro/video/video_8/async_notifier.dart';
+import 'package:riverpro/video/video_9/computed_screen.dart';
 
 class AsyncNotifierScreen extends ConsumerWidget {
   const AsyncNotifierScreen({super.key});
@@ -32,10 +33,24 @@ class AsyncNotifierScreen extends ConsumerWidget {
           loading: () => CircularProgressIndicator(),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => greetingAsyncNotifier.refreshGreeting(),
-        heroTag: 'ref',
-        child: Icon(Icons.refresh),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: .max,
+        children: [
+          FloatingActionButton(
+            onPressed: () => greetingAsyncNotifier.refreshGreeting(),
+            heroTag: 'ref',
+            child: Icon(Icons.refresh),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => const ComputedScreen()));
+            },
+            child: Text("Next"),
+          ),
+        ],
       ),
     );
   }
