@@ -7,9 +7,10 @@ class AsyncNotifierScreen extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final greetingAsync = ref.watch(greetingAsyncNotifierProvider);
+    const id = 34;
+    final greetingAsync = ref.watch(greetingAsyncNotifierProvider(id));
     final greetingAsyncNotifier = ref.watch(
-      greetingAsyncNotifierProvider.notifier,
+      greetingAsyncNotifierProvider(id).notifier,
     );
     return Scaffold(
       appBar: AppBar(title: const Text('Async Notifier')),
