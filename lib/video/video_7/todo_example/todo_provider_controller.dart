@@ -1,3 +1,4 @@
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_riverpod/legacy.dart';
 import '/video/video_7/todo_example/todo_model.dart';
 
@@ -5,6 +6,20 @@ final todoListProvider =
     StateNotifierProvider<TodoListNotifier, List<TodoModel>>(
       (ref) => TodoListNotifier([]),
     );
+
+final todoListsProvider =
+    StateNotifierProvider<TodoListNotifier, List<TodoModel>>(
+      (ref) => TodoListNotifier(
+        List.generate(
+          10,
+          (i) => TodoModel(id: i, title: 'Todo Item $i', complete: i % 3 == 0),
+        ),
+      ),
+    );
+
+final todoListLengthProvider = Provider<int>((ref) {
+  return ref.watch(todoListsProvider).length;
+});
 
 class TodoListNotifier extends StateNotifier<List<TodoModel>> {
   TodoListNotifier(super.state);

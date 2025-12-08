@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:riverpro/video/video_10/select_list_screen.dart';
+import 'package:riverpro/video/video_10/select_sample_demo.dart';
 import 'package:riverpro/video/video_9/computed_providers.dart';
 
 class ComputedScreen extends ConsumerWidget {
@@ -86,15 +88,36 @@ class TodoFilterScreen extends ConsumerWidget {
           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          final text = _controller.text.trim();
-          if (text.isNotEmpty) {
-            notifier.add(text);
-            _controller.clear();
-          }
-        },
-        child: Icon(Icons.add),
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => SampleSelectDemo()));
+            },
+            child: Text('Demo'),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              Navigator.of(
+                context,
+              ).push(MaterialPageRoute(builder: (_) => SelectListScreen()));
+            },
+            child: Text('Screen'),
+          ),
+          FloatingActionButton(
+            onPressed: () {
+              final text = _controller.text.trim();
+              if (text.isNotEmpty) {
+                notifier.add(text);
+                _controller.clear();
+              }
+            },
+            child: Icon(Icons.add),
+          ),
+        ],
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
     );
